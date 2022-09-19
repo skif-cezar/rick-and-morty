@@ -9,7 +9,7 @@ export const charactersApi = createApi({
 		getAllCharacters: builder.query<IAllCharacters, void>({
 			query: () => '/character'
 		}),
-		getCharacterDetailById: builder.query<ICharacter, number>({
+		getCharacterDetailById: builder.query<ICharacter, number | null>({
 			query: (id) => `/character/${id}`
 		}),
 	})
