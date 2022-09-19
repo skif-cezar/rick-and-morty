@@ -1,12 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import clsx from "clsx";
+import styles from "./Header.module.scss";
+import {Menu} from "../Menu/Menu";
+
+const HEADER_STYLES = clsx(styles.header);
 
 export const Header = () => {
   return (
-    <div>
-      <NavLink to={"/"}>
-        <h1>Главная</h1>
-      </NavLink>
-    </div>
+    <header className={HEADER_STYLES}>
+      <Menu />
+    </header>
   );
 };

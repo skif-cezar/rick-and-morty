@@ -6,7 +6,7 @@ import { Header } from './components/Header/Header';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
 
       <Routes>
@@ -14,8 +14,7 @@ const App = () => {
         <Route path={'/character/:id'} element={<CharacterDetailsPage />} />
         <Route path={'*'} element={<h1>Страница не найдена!</h1>} />
       </Routes>
-    
-    </div>
+    </>
   );
 }
 
