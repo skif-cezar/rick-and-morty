@@ -1,7 +1,10 @@
 import React from "react";
 import { useGetAllCharactersQuery } from "../../store/api/characters";
 import { CharacterCard } from "../../components/CharacterCard/CharacterCard";
+import clsx from "clsx";
 import styles from "./HomePage.module.scss";
+
+const CONTAINER_STYLES = clsx(styles.container);
 
 export const HomePage = () => {
   const { data: allCharacters, isLoading, error } = useGetAllCharactersQuery();
@@ -15,10 +18,10 @@ export const HomePage = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <section className={CONTAINER_STYLES}>
       {allCharacters?.results.map((characterData) => (
         <CharacterCard key={characterData.id} data={characterData} />
       ))}
-    </div>
+    </section>
   );
 };

@@ -15,15 +15,6 @@ export const Menu = () => {
         <li className={MENU_ITEM_STYLES}>
           <NavLink className={MENU_LINK_STYLES} to={"/"}>Home</NavLink>
         </li>
-		  <li className={MENU_ITEM_STYLES}>
-          <NavLink className={MENU_LINK_STYLES} to={"/"}>Home</NavLink>
-        </li>
-		  <li className={MENU_ITEM_STYLES}>
-          <NavLink className={MENU_LINK_STYLES} to={"/"}>Home</NavLink>
-        </li>
-		  <li className={MENU_ITEM_STYLES}>
-          <NavLink className={MENU_LINK_STYLES} to={"/"}>Home</NavLink>
-        </li>
       </ul>
     </nav>
   );
